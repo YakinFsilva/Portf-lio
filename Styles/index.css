@@ -123,6 +123,7 @@ header i {
 
 nav > ul {
   display: flex;
+  align-items: center;
 }
 
 nav > ul a {
@@ -142,6 +143,7 @@ header .header-profile > .avatar-img {
 .header-profile {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 }
 
 nav > ul {
@@ -350,6 +352,7 @@ footer {
   }
   header nav {
     display: none;
+    align-items: center;
   }
   header {
     padding: 0px 2rem;

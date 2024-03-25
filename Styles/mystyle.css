@@ -1,3 +1,171 @@
+/* header */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  font-weight: 700;
+  position: fixed;
+  width: 100%;
+  height: 12%;
+  background: linear-gradient(to right, rgba(4, 191, 191, 0.8), rgba(4, 191, 191, 0.8)), url(../assets/common-bg.svg);
+  background-position: center;
+  z-index: 2;
+}
+
+header i {
+  display: none !important;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+nav > ul a {
+  display: block;
+  padding: 35px 20px;
+}
+
+header .header-profile > .avatar-img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul a {
+  display: block;
+  padding: 35px 20px;
+  text-decoration: none;
+}
+
+/* footer */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 0px 6rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+.footer-top .footer-top-content {
+  width: 40%;
+}
+.footer-top h4 {
+  margin-bottom: 1.6rem;
+}
+.footer-top p {
+  color: #eee;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.footer-top i {
+  font-size: 1.6rem;
+  padding: 0rem 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  display: flex;
+  justify-content: center;
+  padding: 2.6rem 0;
+  font-size: 0.7rem;
+}
+.footer-bottom strong {
+  text-decoration: underline;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .section {
+    padding: 10rem 1.4rem;
+  }
+  .subtitle {
+    margin: 0px 0px;
+  }
+  header nav {
+    display: none;
+    align-items: center;
+  }
+  header {
+    padding: 0px 2rem;
+  }
+  header .fa {
+    display: block;
+    font-size: 1.8rem;
+    padding: 2.2rem 1rem;
+    align-self: center;
+    cursor: pointer;
+  }
+  .section-home p {
+    margin: 0px;
+  }
+  .section-about-me-content {
+    /* Change number of columns */
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+  .section-projects ul li {
+    /* Change number of columns */
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+  }
+  .section-projects .project-content {
+    /* Center objects */
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .section-contact form {
+    padding: 2rem;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+  .section-contact input,
+  .section-contact textarea {
+    color: #333;
+  }
+  .section-contact button {
+    align-self: stretch;
+    font-size: 0.9rem;
+  }
+  footer {
+    padding: 0px 1.6rem;
+  }
+  footer .footer-top {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .footer-top > div:first-child {
+    width: auto;
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -94,64 +262,6 @@ h2::after {
 h3 {
   font-weight: 700;
   font-size: 1.8rem;
-}
-
-/* header */
-* {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 30px;
-  font-weight: 700;
-  position: fixed;
-  width: 100%;
-  height: 12%;
-  background: linear-gradient(to right, rgba(4, 191, 191, 0.8), rgba(4, 191, 191, 0.8)), url(../assets/common-bg.svg);
-  background-position: center;
-  z-index: 2;
-}
-
-header i {
-  display: none !important;
-}
-
-nav > ul {
-  display: flex;
-}
-
-nav > ul a {
-  display: block;
-  padding: 35px 20px;
-}
-
-header .header-profile > .avatar-img {
-  width: 40px;
-  height: 40px;
-  border: 1px solid white;
-  border-radius: 50%;
-  margin-right: 15px;
-  overflow: hidden;
-}
-
-.header-profile {
-  display: flex;
-  align-items: center;
-}
-
-nav > ul {
-  display: flex;
-}
-
-nav > ul a {
-  display: block;
-  padding: 35px 20px;
-  text-decoration: none;
 }
 
 /* section about me */
@@ -296,112 +406,4 @@ textarea {
 
 .section-projects ul li + li {
   margin-top: 50px;
-}
-
-/* footer */
-footer {
-  background: #000;
-  color: #fff;
-  padding: 0px 6rem;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 4rem 0;
-}
-.footer-top .footer-top-content {
-  width: 40%;
-}
-.footer-top h4 {
-  margin-bottom: 1.6rem;
-}
-.footer-top p {
-  color: #eee;
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-.footer-top i {
-  font-size: 1.6rem;
-  padding: 0rem 5px;
-}
-
-.footer-bottom {
-  border-top: 1px solid #444;
-  display: flex;
-  justify-content: center;
-  padding: 2.6rem 0;
-  font-size: 0.7rem;
-}
-.footer-bottom strong {
-  text-decoration: underline;
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-  .section {
-    padding: 10rem 1.4rem;
-  }
-  .subtitle {
-    margin: 0px 0px;
-  }
-  header nav {
-    display: none;
-  }
-  header {
-    padding: 0px 2rem;
-  }
-  header .fa {
-    display: block;
-    font-size: 1.8rem;
-    padding: 2.2rem 1rem;
-    align-self: center;
-    cursor: pointer;
-  }
-  .section-home p {
-    margin: 0px;
-  }
-  .section-about-me-content {
-    /* Change number of columns */
-    grid-template-columns: 1fr;
-    row-gap: 60px;
-  }
-  .section-projects ul li {
-    /* Change number of columns */
-    grid-template-columns: 1fr;
-    row-gap: 1.6rem;
-  }
-  .section-projects .project-content {
-    /* Center objects */
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  .section-contact form {
-    padding: 2rem;
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
-  }
-  .section-contact input,
-  .section-contact textarea {
-    color: #333;
-  }
-  .section-contact button {
-    align-self: stretch;
-    font-size: 0.9rem;
-  }
-  footer {
-    padding: 0px 1.6rem;
-  }
-  footer .footer-top {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 50px;
-  }
-  .footer-top > div:first-child {
-    width: auto;
-  }
 }/*# sourceMappingURL=mystyle.css.map */
